@@ -153,7 +153,7 @@ public class E03AVLTree<T> {
 
 
     public T search(T value) {
-        if(buscar(root, value) == true)
+        if(buscar(root, value))
             return value;
 
         return null;
@@ -203,7 +203,7 @@ public class E03AVLTree<T> {
         return count;
     }
 
-    private boolean completeNode(TreeNode root) {
+    private boolean completeNode(TreeNode<T> root) {
         if(root == null)
             return true;
 

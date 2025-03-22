@@ -7,9 +7,9 @@ public class E02KthSmallest {
 
     public int kthSmallest(TreeNode<Integer> root, int k) {
         if(root == null)
-            return k -k;
+            return 0;
 
-        if(buscar(root, k) != true) {
+        if(!buscar(root, k)) {
             Addk(root, k);
         }
 
@@ -27,10 +27,8 @@ public class E02KthSmallest {
         if(root.value < value)
             return buscar(root.left, value);
 
-        if(root.value > value)
-            return buscar(root.right, value);
+        return buscar(root.right, value);
 
-        return false;
     }
 
     private void Addk(TreeNode<Integer> root, int k) {
