@@ -178,20 +178,9 @@ public class E03AVLTree<T> {
 
 
 
-    private int answer = 0;
+
     public int height() {
         return high(root);
-    }
-
-    private void topDown(TreeNode<T> root, int depth) {
-        if(root == null)
-            return;
-
-        if (root.left == null && root.right == null)
-            answer = Math.max(depth, answer);
-
-        topDown(root.left, depth + 1);
-        topDown(root.right, depth + 1);
     }
 
     private int count;
